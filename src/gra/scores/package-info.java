@@ -1,0 +1,4 @@
+/**
+ * Wyniki
+ */
+package gra.scores;

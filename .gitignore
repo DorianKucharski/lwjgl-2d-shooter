@@ -1,0 +1,28 @@
+# Build output
+out/
+build/
+*.class
+
+# Generated Javadoc
+docs/
+
+# IntelliJ IDEA (keep shared project config, ignore per-user state)
+.idea/workspace.xml
+.idea/shelf/
+.idea/usage.statistics.xml
+.idea/dictionaries/
+.idea/tasks.xml
+
+# JVM crash logs
+hs_err_pid*.log
+replay_pid*.log
+*.log
+
+# In-game screenshots (F9)
+screenshots/*
+!screenshots/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

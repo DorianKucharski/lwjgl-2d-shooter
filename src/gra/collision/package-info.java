@@ -1,0 +1,4 @@
+/**
+ * Kolizja
+ */
+package gra.collision;
