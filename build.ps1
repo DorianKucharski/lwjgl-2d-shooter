@@ -5,8 +5,8 @@
 
 $ErrorActionPreference = "Stop"
 $root = $PSScriptRoot
-$name = "LWJGL-2D-Shooter"
-$version = "1.0.0"
+$name = "NightRaid"
+$version = "1.1.0"
 
 function Tool($t) {
     if ($env:JAVA_HOME) { return Join-Path $env:JAVA_HOME "bin\$t.exe" }

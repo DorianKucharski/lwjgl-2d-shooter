@@ -101,7 +101,7 @@ public class Menu {
      * Renderowanie menu, w zależności od aktualnego menu wyowołuje metodę renderowania menu.
      */
     public void render() {
-        Draw.stringCentered("NAZWA GRY", 0, Main.getWindow().getHeight() / 20f * 8, 64);
+        Draw.stringCentered("NIGHT RAID", 0, Main.getWindow().getHeight() / 20f * 8, 64);
         if (currentMenu == MAIN_MENU) {
             mainMenu.render();
         } else if (currentMenu == SAVE_LOAD) {

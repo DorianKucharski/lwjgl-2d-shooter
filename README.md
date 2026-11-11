@@ -1,6 +1,6 @@
-# LWJGL 2D Shooter
+# Night Raid
 
-A 2D side-scrolling platformer shooter written in Java with [LWJGL 3](https://www.lwjgl.org/) (GLFW + OpenGL) and [JOML](https://github.com/JOML-CI/JOML).
+Night Raid is a 2D side-scrolling platformer shooter written in Java with [LWJGL 3](https://www.lwjgl.org/) (GLFW + OpenGL) and [JOML](https://github.com/JOML-CI/JOML).
 It was made in 2020 as a university course project. The engine is hand-rolled: shaders, sprite rendering, tile maps, collisions, cameras, menus and audio were all written from scratch on top of raw OpenGL.
 
 > Note: the in-game text and the source code comments/Javadoc are in Polish.
@@ -60,9 +60,9 @@ Type these during gameplay:
 
 ## Download and play (Windows)
 
-1. Download `LWJGL-2D-Shooter-1.0.0-windows.zip` from the [latest release](https://github.com/DorianKucharski/lwjgl-2d-shooter/releases/latest).
+1. Download `NightRaid-1.1.0-windows.zip` from the [latest release](https://github.com/DorianKucharski/lwjgl-2d-shooter/releases/latest).
 2. Extract it anywhere.
-3. Run `LWJGL-2D-Shooter.exe`.
+3. Run `NightRaid.exe`.
 
 No Java installation is needed because a trimmed Java runtime is bundled. Keep the `.exe` next to the `audio`, `levels`, `textures` and `saves` folders, since the game loads them from its working directory.
 
@@ -82,8 +82,8 @@ powershell -ExecutionPolicy Bypass -File build.ps1
 
 This compiles the game, bundles it with a minimal Java runtime and the game assets, and writes:
 
-- `dist/LWJGL-2D-Shooter/LWJGL-2D-Shooter.exe`
-- `dist/LWJGL-2D-Shooter-1.0.0-windows.zip`
+- `dist/NightRaid/NightRaid.exe`
+- `dist/NightRaid-1.1.0-windows.zip`
 
 The script uses `JAVA_HOME` if set, otherwise `javac`/`jpackage` from `PATH`.
 

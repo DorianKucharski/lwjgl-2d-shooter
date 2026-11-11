@@ -145,7 +145,7 @@ public class Main {
         window = new Window();
         window.setSize(width, height);
         window.setFullscreen(false);
-        window.createWindow("Gra");
+        window.createWindow("Night Raid");
         /**
          * Przypisanie wskaznika obiektu window z biblioteki GLFW
          */
