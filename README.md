@@ -58,21 +58,40 @@ Type these during gameplay:
 | `NEXTLVL` | Skip to the next level |
 | `IREGRETNOTHING` | Game over |
 
-## Requirements
+## Download and play (Windows)
 
-- JDK 11 or newer
+1. Download `LWJGL-2D-Shooter-1.0.0-windows.zip` from the [latest release](https://github.com/DorianKucharski/lwjgl-2d-shooter/releases/latest).
+2. Extract it anywhere.
+3. Run `LWJGL-2D-Shooter.exe`.
+
+No Java installation is needed because a trimmed Java runtime is bundled. Keep the `.exe` next to the `audio`, `levels`, `textures` and `saves` folders, since the game loads them from its working directory.
+
+## Building from source
+
+### Requirements
+
+- JDK 11 or newer to compile and run, JDK 17+ to build the `.exe` package (`jpackage`)
 - Windows (the bundled LWJGL natives in `libs/` are Windows-only; for Linux/macOS download the matching `lwjgl*-natives-*.jar` files for LWJGL 3.2.3 from [lwjgl.org](https://www.lwjgl.org/customize))
 - A GPU with OpenGL 3.0+ support
 
-## Running
+### Package as a Windows `.exe`
 
-The game loads textures, levels, audio and saves relative to the working directory, so it must be run from the repository root.
+```powershell
+powershell -ExecutionPolicy Bypass -File build.ps1
+```
 
-### IntelliJ IDEA
+This compiles the game, bundles it with a minimal Java runtime and the game assets, and writes:
 
-Open the folder as a project, set the project SDK to JDK 11+, and run `gra.game.Main`.
+- `dist/LWJGL-2D-Shooter/LWJGL-2D-Shooter.exe`
+- `dist/LWJGL-2D-Shooter-1.0.0-windows.zip`
 
-### Command line
+The script uses `JAVA_HOME` if set, otherwise `javac`/`jpackage` from `PATH`.
+
+### Run from IntelliJ IDEA
+
+Open the folder as a project, set the project SDK to JDK 11+, and run `gra.game.Main`. The working directory must be the repository root.
+
+### Run from the command line
 
 ```sh
 # compile

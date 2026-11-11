@@ -26,3 +26,6 @@ screenshots/*
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Packaged game (build.ps1)
+dist/

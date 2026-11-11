@@ -3,8 +3,6 @@ package gra.render;
 import static org.lwjgl.opengl.GL20.*;
 
 import java.io.*;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.nio.FloatBuffer;
 
 import org.joml.Matrix4f;
@@ -106,18 +104,19 @@ public class Shader {
 	 */
 	private String readFile(String filename) {
 		StringBuilder outputString = new StringBuilder();
-		BufferedReader bufferedReader;
-		try {
-			URI filePath = getClass().getResource("/shaders/" + filename).toURI();
-			bufferedReader = new BufferedReader(new FileReader(new File(filePath)));
+		// Read via the classpath stream so it also works when the shaders are packed inside a jar.
+		InputStream stream = getClass().getResourceAsStream("/shaders/" + filename);
+		if (stream == null) {
+			throw new IllegalStateException("Shader not found on classpath: /shaders/" + filename);
+		}
+		try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(stream, "UTF-8"))) {
 			String line;
 			while ((line = bufferedReader.readLine()) != null) {
 				outputString.append(line);
 				outputString.append("\n");
 			}
-			bufferedReader.close();
 		}
-		catch (IOException | URISyntaxException e) {
+		catch (IOException e) {
 			e.printStackTrace();
 		}
 		return outputString.toString();
