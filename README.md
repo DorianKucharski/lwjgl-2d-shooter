@@ -8,6 +8,10 @@ It was made in 2020 as a university course project. The engine is hand-rolled: s
 ## Screenshots
 
 <p align="center">
+  <img src="assets/screenshots/main-menu.png" width="80%" alt="Main menu">
+</p>
+
+<p align="center">
   <img src="assets/screenshots/gameplay-1.png" width="49%" alt="Gameplay: player on a rooftop facing an enemy">
   <img src="assets/screenshots/gameplay-2.png" width="49%" alt="Gameplay: player and enemies on city rooftops">
 </p>
